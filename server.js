@@ -29,7 +29,7 @@ mongoose.connect(MONGODB_URI);
 app.engine("handlebars", exphbs(engine));
 app.set("view engine", "handlebars");
 
-app.get("*",(req,res)=>{
+app.get("/news",(req,res)=>{
 
     function renderAll(){
 
@@ -79,6 +79,11 @@ app.get("*",(req,res)=>{
 
                 });
 
-              });
+    });
 
 });
+
+app.get("/api/all",(req,res)=>{
+    db.Article.find({})
+              .then( all => res.json(all));
+})

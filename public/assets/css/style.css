@@ -1,45 +1,82 @@
-  body{
-    background-color: #E8E8E8;
-  }
-  header{
-    font-family: "Luckiest Guy";
-    background-color: #A22522;
-    color: white;
-    padding: 40px;
-    
-  }
-  h1{
-    font-size: 800%;
-    text-shadow: -5px -5px black;
-  }
-  h2{
-    margin-top: -40px;
-    font-size: 225%;
-    text-shadow: -3px -3px black;
-  }
-  #news{
-    padding: 10px;
-    max-width: 650px;
-  }
-  .panel-heading{
-    background-color: #27476E !important;
-    color: white !important;
-    font-size: 150%;
-    text-shadow: -2px -2px black;
-  }
-  .panel{
-    text-align: left;
-    border: solid 1px #27476E !important;
-    font-family: "Acme" !important;
-  }
-  .blurb{
-    font-size: 130%;
-  }
-  .btn-comix{
-    border: 1px solid #27476E;
-    color: #27476E;
+body{
+  background-color: #E8E8E8;
+}
+header{
+  font-family: "Luckiest Guy";
+  background-color: #A22522;
+  color: white;
+  padding: 40px;
   
-  }
+}
+h1{
+  font-size: 800%;
+  text-shadow: -5px -5px black;
+}
+h2{
+  margin-top: -40px;
+  font-size: 225%;
+  text-shadow: -3px -3px black;
+}
+#news{
+  padding: 10px;
+  max-width: 650px;
+}
+.panel-article{
+  background-color: #27476E !important;
+  color: white !important;
+  font-size: 150%;
+  text-shadow: -2px -2px black;
+}
+.panel{
+  border: solid 1px #27476E !important;
+  font-family: "Acme" !important;
+  text-align: left;
+}
+.blurb{
+  font-size: 130%;
+}
+.btn-comix{
+  border: 1px solid #27476E;
+  color: #27476E;
+}
+.btn-submit{
+  margin-top: 3px;
+  background-color: #F2AF29;
+  color: black;
+}
+.author{
+  font-size: 60%;
+}
+.panel-footer{
+  padding-top: 20px !important;
+}
+.panel-comment{ 
+  border: 1px solid #F2AF29 !important;
+  font-size: 120%;
+}
+.comment-head{
+  background-color: #F2AF29;
+}
+.comment-body{
+  font-size: 90%;
+}
+textarea{
+  border-radius: 5px;
+  width: 100%;    border: 1px solid #F2AF29 !important;
+}
+.panel-form{ 
+  border: 1px solid #F2AF29 !important;
+  font-size: 120%;
+}
+.form-head{
+  background-color: #F2AF29;
+}
+form{
+  margin-bottom: -10px;
+}
   .author{
     font-size: 60%;
   }
+.hidden{
+  display: none;
+}

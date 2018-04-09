@@ -1,15 +1,28 @@
 <div class="panel panel-default">
-    <div class="panel-heading" data-link="{{link}}">
+    <div class="panel-heading panel-article" data-link="{{link}}">
         <span class="title">{{title}}</span> →
         <div class="author">By {{author}}</div>
     </div>
     <div class="panel-body">
         <p class="blurb">{{blurb}}</p>
-        <button class="btn btn-comix" id="button-{{id}}">
+        <button class="btn btn-comix show" data-id="{{id}}">
             Show <span class="how-many"></span>Comments <span class="glyphicon glyphicon-comment"></span>
         </button>
-        <div class="comments" id="comments-{{id}}">
-        </div>
     </div>
+    <div class="panel-footer comments hidden" id="comments-{{id}}">
+
+          {{#each comments}}{{>comment-block}}{{/each}}
+          <form>
+            <div class="panel panel-form">
+            <div class="panel-heading form-head">
+                Add a Comment!
+             </div>
+             <div class="panel-body comment-body">
+               <textarea></textarea>
+               <input class="btn btn-submit" type="submit" data-id="submit-{{id}}"/>
+             </div>
+          </div>
+          </form>
+      </div>
       
 </div>
