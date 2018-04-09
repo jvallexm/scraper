@@ -6,12 +6,13 @@
     <div class="panel-body">
         <p class="blurb">{{blurb}}</p>
         <button class="btn btn-comix show" data-id="{{id}}">
-            Show <span class="how-many"></span>Comments <span class="glyphicon glyphicon-comment"></span>
+            <span id="show-{{id}}">Show</span> <span class="how-many"></span>Comments <span class="glyphicon glyphicon-comment"></span>
         </button>
     </div>
     <div class="panel-footer comments hidden" id="comments-{{id}}">
-
-          {{#each comments}}{{>comment-block}}{{/each}}
+          <div id="list-{{id}}">            
+            {{#each comments}}{{>comment-block}}{{/each}}
+          </div>
           <form>
             <div class="panel panel-form">
             <div class="panel-heading form-head">
