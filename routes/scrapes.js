@@ -7,7 +7,6 @@ module.exports = function(callback){
 
     const $        = cheerio.load(html);
     const results  = [];
-    const excerpts = [];
 
     $("div.info-wrapper").each(function(i, element) {
 
@@ -15,18 +14,15 @@ module.exports = function(callback){
         let title = $(element).children('strong.title').children().text();
         let blurb = $(element).children("div.details").children("div.excerpt").text();
 
-        results.push({
-        title: title,
-        link: link,
-        blurb: blurb
-        });
+        if(title.length > 1 && link && blurb.length > 1)
+            results.push({
+                id: new Date().getTime(),
+                title: title,
+                link: link,
+                blurb: blurb
+            });
         
     });
-
-    $("div.excerpt").each((i,e)=>{
-        excerpts.push($(e).text());
-
-    })
 
     // Log the results once you've looped through each of the elements found with cheerio
     callback(results);

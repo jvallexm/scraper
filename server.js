@@ -12,9 +12,23 @@ app.use( bodyParser.urlencoded({ extended: false }) );
 app.use( bodyParser.json()                          );
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+const engine = {
+
+    defaultLayout: "main",
+    partialsDir: path.join(__dirname + `/views/partials`)
+
+};
+
+/* Handlebars Middlewear */
+
+app.engine("handlebars", exphbs(engine));
 app.set("view engine", "handlebars");
 
+app.get("*",(req,res)=>{
+    scrape((articles)=>{
+        res.render("news",{articles: articles});
+    })
+})
 
 scrape((r)=>{
     console.log(r);

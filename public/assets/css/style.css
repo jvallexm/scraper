@@ -1,0 +1,40 @@
+  body{
+    background-color: #E8E8E8;
+  }
+  header{
+    font-family: "Luckiest Guy";
+    background-color: #A22522;
+    color: white;
+    padding: 40px;
+    
+  }
+  h1{
+    font-size: 800%;
+    text-shadow: -5px -5px black;
+  }
+  h2{
+    margin-top: -40px;
+    font-size: 225%;
+    text-shadow: -3px -3px black;
+  }
+  #news{
+    padding: 10px;
+  }
+  .panel-heading{
+    background-color: #27476E !important;
+    color: white !important;
+    font-size: 150%;
+    text-shadow: -2px -2px black;
+  }
+  .panel{
+    border: solid 1px #27476E !important;
+    font-family: "Acme" !important;
+  }
+  .blurb{
+    font-size: 130%;
+  }
+  .btn-comix{
+    border: 1px solid #27476E;
+    color: #27476E;
+  
+  }
