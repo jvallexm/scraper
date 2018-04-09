@@ -86,9 +86,9 @@ app.get("/news",(req,res)=>{
 
 app.post(`/api/comment/`,(req,res)=>{
 
-    console.log("trying to do a comment");
+    console.log("trying to do a comment" + JSON.stringify(req.body));
 
-    db.Article.update({id: req.body.id},{$push: {comments: req.body.comment}})
+    db.Article.update({_id: req.body.id},{$push: {comments: req.body.comment}})
               .then(res.send("ding"))
               .catch(err => res.send(err));
 

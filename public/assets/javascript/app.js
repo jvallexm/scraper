@@ -43,9 +43,12 @@ $(document).ready(()=>{
             type: "POST",
             data: {
                 id: id,
-                user: "So and So",
-                comment: "Blah blah blah",
-                posted_on: new Date().getTime()
+                comment: {
+                    user_id: "4",
+                    user: "So and So",
+                    comment: "Blah blah blah",
+                    posted_on: new Date().getTime()
+                }
             }
         }).then((res)=>{
 
