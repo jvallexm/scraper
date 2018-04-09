@@ -19,6 +19,7 @@
   }
   #news{
     padding: 10px;
+    max-width: 650px;
   }
   .panel-heading{
     background-color: #27476E !important;
@@ -27,6 +28,7 @@
     text-shadow: -2px -2px black;
   }
   .panel{
+    text-align: left;
     border: solid 1px #27476E !important;
     font-family: "Acme" !important;
   }
@@ -37,4 +39,7 @@
     border: 1px solid #27476E;
     color: #27476E;
   
+  }
+  .author{
+    font-size: 60%;
   }
