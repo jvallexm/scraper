@@ -13,13 +13,13 @@
           <div id="list-{{id}}">            
             {{#each comments}}{{>comment-block}}{{/each}}
           </div>
-          <form>
+          <form data-id="{{id}}">
             <div class="panel panel-form">
             <div class="panel-heading form-head">
                 Add a Comment!
              </div>
              <div class="panel-body comment-body">
-               <textarea></textarea>
+               <textarea id="text-{{id}}"></textarea>
                <input class="btn btn-submit" type="submit" data-id="submit-{{id}}"/>
              </div>
           </div>

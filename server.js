@@ -44,6 +44,7 @@ app.get("/news",(req,res)=>{
     }
 
     db.Article.find({})
+
               .then((oldNews)=>{
 
                 let headlines = [];
@@ -80,6 +81,16 @@ app.get("/news",(req,res)=>{
                 });
 
     });
+
+});
+
+app.post(`/api/comment/`,(req,res)=>{
+
+    console.log("trying to do a comment");
+
+    db.Article.update({id: req.body.id},{$push: {comments: req.body.comment}})
+              .then(res.send("ding"))
+              .catch(err => res.send(err));
 
 });
 
