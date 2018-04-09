@@ -24,18 +24,6 @@ const engine = {
 
 mongoose.connect(MONGODB_URI);
 
-/*
-
-scrape((articles)=>{
-    articles.forEach(i=>{
-        db.Article.create(i)
-                  .then(  (n)   => console.log("created new article") )
-                  .catch( (err) => console.log(err) );
-    });
-});
-
-*/
-
 /* Handlebars Middlewear */
 
 app.engine("handlebars", exphbs(engine));
