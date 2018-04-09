@@ -3,6 +3,8 @@ const request = require("request");
 
 module.exports = function(callback){
 
+    console.log("doin a scrape");
+
     request("https://www.cbr.com/category/comics/news/", (error, response, html)=>{
 
     const $        = cheerio.load(html);
