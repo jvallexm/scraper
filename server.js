@@ -6,6 +6,7 @@ const path        = require("path");
 const exphbs      = require("express-handlebars");
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 const mongoose    = require("mongoose");
+const passport    = require("passport");
 
 app.listen(port, ()=> console.log(`listening on port ${port}`)); // I hear you, dog
 
@@ -27,6 +28,7 @@ mongoose.connect(MONGODB_URI);
 app.engine("handlebars", exphbs(engine));
 app.set("view engine", "handlebars");
 
+require( "./routes/authRoutes" )(app,passport);
 require( "./routes/apiRoutes"  )(app);
 require( "./routes/htmlRoutes" )(app);
 
