@@ -26,6 +26,7 @@ h2{
   color: white !important;
   font-size: 150%;
   text-shadow: -2px -2px black;
+  cursor: pointer;
 }
 .panel{
   border: solid 1px #27476E !important;

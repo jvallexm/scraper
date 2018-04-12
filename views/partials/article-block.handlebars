@@ -1,6 +1,6 @@
 <div class="panel panel-default">
     <div class="panel-heading panel-article" data-link="{{link}}">
-        <span class="title">{{title}}</span> →
+        <span class="title" title="{{link}}">{{title}}</span> →
         <div class="author">By {{author}}</div>
     </div>
     <div class="panel-body">
@@ -19,6 +19,7 @@
                 Add a Comment!
              </div>
              <div class="panel-body comment-body">
+               <div id="error-{{id}}"></div>
                <input id="text-{{id}}" class="new-comment"></input>
                <input class="btn btn-submit" type="submit" data-id="submit-{{id}}"/>
              </div>

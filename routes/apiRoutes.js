@@ -2,6 +2,8 @@ const db          = require("../models");
 
 module.exports = function(app){
 
+    /* API Route to post a new comment to a single article */
+
     app.post(`/api/comment/`,(req,res)=>{
 
         console.log("trying to do a comment" + JSON.stringify(req.body));
@@ -11,6 +13,8 @@ module.exports = function(app){
                 .catch(err => res.send(err));
 
     });
+
+    /* Finds all articles and returns them as a json object */
 
     app.get("/api/all",(req,res)=>{
         db.Article.find({})
