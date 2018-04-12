@@ -7,6 +7,8 @@ const exphbs      = require("express-handlebars");
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 const mongoose    = require("mongoose");
 const passport    = require("passport");
+const env         = require('dotenv').config();
+
 
 app.listen(port, ()=> console.log(`listening on port ${port}`)); // I hear you, dog
 
