@@ -80,3 +80,6 @@ form{
 .hidden{
   display: none;
 }
+.new-comment{
+  width: 100%;
+}
