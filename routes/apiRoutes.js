@@ -6,9 +6,11 @@ module.exports = function(app){
 
     app.post(`/api/comment/`,(req,res)=>{
 
-        console.log("trying to do a comment" + JSON.stringify(req.body));
+        console.log("trying to do a comment");
 
-        db.Article.update({_id: req.body.id},{$push: {comments: req.body.comment}})
+        console.log(req.body);
+
+        db.Article.update({_id: req.body.id},{$push: {comments: req.body}})
                 .then(res.send("ding"))
                 .catch(err => res.send(err));
 

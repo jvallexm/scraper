@@ -51,39 +51,38 @@ $(document).ready(()=>{
 
         let id = $(this).attr("data-id"); // Gets the id of the post that's being commented on
 
-        let newComment = $("#text-" + id).val().trim(); // Gets the text of the new comment
+        let thisComment = $("#text-" + id).val().trim(); // Gets the text of the new comment
 
         /* Simple validation */
 
-        if(newComment.length > 150) {
+        if(thisComment.length > 150) {
 
             $("#error-" + id).text("Please limit comments to 150 characters");
 
-        } else if (newComment.length < 10) {
+        } else if (thisComment.length < 10) {
 
             $("#error-" + id).text("Comments must be at least 10 characters");
 
         } else {
 
             $("#error-" + id).text("");
+
         
             $.ajax(`/api/comment/`,{
                 type: "POST",
                 data: {
                     id: id,
-                    comment: {
-                        user_id: "4",
-                        user: "So and So",
-                        comment: $("#text-" + id).val().trim(),
-                        posted_on: new Date().getTime()
-                    }
+                    user_id: "4",
+                    user: "So and So",
+                    comment: thisComment,
+                    posted_on: new Date().getTime()
                 }
             }).then((res)=>{
 
                 /* Once a comment has been posted it appends it to that article on the user's side */
 
                 console.log(res);
-                let comment = newComment("So and So","Blah blah blah");
+                let comment = newComment("So and So",thisComment);
                 $("#list-" + id).append(comment);
                 $("#text-"+id).val("");
 

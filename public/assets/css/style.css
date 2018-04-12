@@ -36,6 +36,12 @@ h2{
 .blurb{
   font-size: 130%;
 }
+#login{
+  background-color: #27476E;
+  color: white;
+  font-family: "Acme";
+  margin-bottom: 10px;
+}
 .btn-comix{
   border: 1px solid #27476E;
   color: #27476E;
